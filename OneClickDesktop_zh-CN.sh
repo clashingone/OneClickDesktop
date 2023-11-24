@@ -20,7 +20,7 @@
 #访问https://guacamole.apache.org/releases/获取最新源码。
 
 GUACAMOLE_DOWNLOAD_LINK="https://mirrors.ocf.berkeley.edu/apache/guacamole/1.5.2/source/guacamole-server-1.5.2.tar.gz"
-GUACAMOLE_VERSION="1.5.2"
+#GUACAMOLE_VERSION="1.5.2"
 
 #此脚本仅支持Ubuntu 18/20, Debian 10, 以及CentOS 7/8.
 #如果您试图再其他版本的操作系统中安装，可以在下面禁用OS检查开关。
@@ -234,9 +234,9 @@ function install_guacamole_ubuntu_debian
 		apt-get install libjpeg-turbo8-dev language-pack-ja language-pack-zh* language-pack-ko -y
 	fi
 	wget $GUACAMOLE_DOWNLOAD_LINK
-	tar zxf guacamole-server-${GUACAMOLE_VERSION}.tar.gz
-	rm -f guacamole-server-${GUACAMOLE_VERSION}.tar.gz
-	cd $CurrentDir/guacamole-server-$GUACAMOLE_VERSION
+        tar zxf guacamole-server-1.5.2.tar.gz  
+        rm -f guacamole-server-1.5.2.tar.gz
+        cd $CurrentDir/guacamole-server-1.5.2
 	echo "开始安装Guacamole服务器..."
 	./configure --with-init-dir=/etc/init.d
 	if [ -f $CurrentDir/guacamole-server-$GUACAMOLE_VERSION/config.status ] ; then
