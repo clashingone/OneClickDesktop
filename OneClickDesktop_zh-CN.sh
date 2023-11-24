@@ -26,7 +26,7 @@ GUACAMOLE_VERSION="1.5.2"
 #如果您试图再其他版本的操作系统中安装，可以在下面禁用OS检查开关。
 #请注意，在其他操作系统上安装此脚本可能会导致不可预料的错误。  请在安装前做好备份。
 
-OS_CHECK_ENABLED=ON
+OS_CHECK_ENABLED=OFF
 
 
 
